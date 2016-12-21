@@ -6,6 +6,10 @@
 $ apm install apex-ui
 ```
 
+### Screenshot
+
+![](https://dl.dropboxusercontent.com/u/6396913/Apex/Atom/apex-atom.jpg)
+
 ## Badges
 
 [![](http://apex.sh/images/badge.svg)](https://apex.sh/ping/)
