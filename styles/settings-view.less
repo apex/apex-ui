@@ -1,0 +1,50 @@
+.settings-view {
+    .link {
+        color: @primary-color;
+
+        &:hover {
+            color: @primary-color;
+        }
+    }
+
+    .alert {
+        border: none;
+
+        .alert-info {
+            
+        }
+    }
+
+    .config-menu {
+        background: @base-background-color;
+
+        .panels-menu {
+            li {
+
+                a {
+                    .transition-03;
+                }
+
+                &.active {
+                    a {
+                        background: @background-color-selected;
+                    }
+                }
+
+                &:hover {
+                    background: @background-color-highlight;
+                }
+            }
+        }
+    }
+
+    .package-card {
+        .transition-03;
+        background: @background-color-selected;
+        border: none;
+
+        &:hover {
+            background: @background-color-highlight;
+        }
+    }
+}

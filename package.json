@@ -1,0 +1,19 @@
+{
+  "name": "apex-ui",
+  "theme": "ui",
+  "version": "0.0.1",
+  "description": "Apex monochrome theme UI inspired by iA Writer",
+  "keywords": [
+    "apex",
+    "monochrome",
+    "ui",
+    "ia",
+    "theme",
+    "writer"
+  ],
+  "repository": "https://github.com/apex/apex-ui",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
