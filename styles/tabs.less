@@ -9,6 +9,11 @@ atom-pane:not(.active) {
   }
 }
 
+// Correct padding applied by no-title-bar
+.platform-darwin atom-workspace atom-panel-container.left:empty + atom-workspace-axis.vertical .tab-bar {
+  padding-left: 0 !important;
+}
+
 // Tabs
 // -------------------
 // Displays selectable tabs above the editor.
@@ -17,7 +22,7 @@ atom-pane:not(.active) {
 .tab-bar {
     background-color: @tab-bar-background-color;
     border-top: 1px solid @base-border-color;
-    margin: @pane-padding / 2 @pane-padding;
+    margin: 15px;
 
     .title;
 
