@@ -1,0 +1,33 @@
+@keyframes show-logo {
+  from {
+    opacity: 0;
+    transform: scale(.9, .9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+
+.background-message {
+  transform: translateY(-25px);
+}
+
+.background-message::before {
+  position: absolute;
+  display: block;
+  content: '';
+  background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTk5cHgiIGhlaWdodD0iMjIxcHgiIHZpZXdCb3g9IjE1OSAxNDggMTk5IDIyMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+PC9kZWZzPgogICAgPHBvbHlnb24gaWQ9IlBhdGgiIHN0cm9rZT0ibm9uZSIgZmlsbD0iIzAwMDAwMCIgZmlsbC1ydWxlPSJldmVub2RkIiBwb2ludHM9IjE5Ny40MzUyOTQgMzU5LjU0MjA4MyAzNDAuMzA1ODgyIDM1OS41NDIwODMgMjU4IDE3NS43NDMyMjQgMTcxLjQyMzUyOSAzNjkgMTU5IDM2OSAyNTggMTQ4IDM1NyAzNjkgMTk3LjQzNTI5NCAzNjkiPjwvcG9seWdvbj4KPC9zdmc+Cg==') 50% 50% no-repeat;
+  background-size: 10%;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  animation: show-logo 5s ease-out forwards;
+}
+
+.background-message .message {
+  display: none;
+}
