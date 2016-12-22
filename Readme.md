@@ -8,11 +8,18 @@ $ apm install apex-ui
 
 ### Screenshot
 
+This variant:
+
 ![](https://dl.dropboxusercontent.com/u/6396913/Apex/Atom/apex-atom.jpg)
+
+Slim variant:
+
+![](https://dl.dropboxusercontent.com/u/6396913/Apex/Atom/apex-ui-slime.jpg)
 
 ## Links
 
 - [Remove title bar](https://atom.io/packages/no-title-bar)
+- [Apex UI Slim](https://github.com/apex/apex-ui-slim)
 - [Apex Syntax](https://github.com/apex/apex-syntax)
 
 ## Badges
