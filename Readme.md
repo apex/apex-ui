@@ -18,6 +18,7 @@ Slim variant:
 
 ## Links
 
+- Check out [Unsplash](https://unsplash.com/@tjholowaychuk) for wallpapers
 - [Remove title bar](https://atom.io/packages/no-title-bar)
 - [Apex UI Slim](https://github.com/apex/apex-ui-slim)
 - [Apex Syntax](https://github.com/apex/apex-syntax)
