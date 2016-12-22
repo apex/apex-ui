@@ -12,6 +12,7 @@ $ apm install apex-ui
 
 ## Links
 
+- [Remove title bar](https://atom.io/packages/no-title-bar)
 - [Apex Syntax](https://github.com/apex/apex-syntax)
 
 ## Badges
