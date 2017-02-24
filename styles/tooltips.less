@@ -15,6 +15,25 @@
         margin: 0 -.3em 0 0.25em;
         // border-radius: max(2px, @component-border-radius / 2);
         color: #FFF;
-        background: @background-color-selected;
+        background: @oc-gray-9;
+    }
+
+    &.top {
+        .tooltip-inner {
+            background-color: @oc-gray-9;
+        }
+        .tooltip-arrow {
+            border-top-color: @oc-gray-9;
+        }
+    }
+
+    &.bottom
+    {
+        .tooltip-inner {
+            background-color: @oc-gray-9;
+        }
+        .tooltip-arrow {
+            border-bottom-color: @oc-gray-9;
+        }
     }
 }

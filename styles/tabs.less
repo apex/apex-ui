@@ -10,8 +10,17 @@ atom-pane:not(.active) {
 }
 
 // Correct padding applied by no-title-bar
-.platform-darwin atom-workspace atom-panel-container.left:empty + atom-workspace-axis.vertical .tab-bar {
-  padding-left: 0 !important;
+.platform-darwin atom-workspace-axis.horizontal {
+    > .left{
+        &:empty + atom-workspace-axis.vertical .tab-bar {
+            padding-left: 0 !important;
+        }
+        &:not(:empty) {
+            margin-left: 6px;
+        }
+    }
+
+    margin-left: -1px;
 }
 
 // Tabs
@@ -20,9 +29,18 @@ atom-pane:not(.active) {
 // Overrides: atom/tabs
 
 .tab-bar {
+    z-index: 10;
     background-color: @tab-bar-background-color;
     border-top: 1px solid @base-border-color;
-    margin: 15px;
+    margin: 15px 0;
+    * {
+        .transition-03;
+    }
+
+    &:empty {
+        border-top: none;
+        background-color: white;
+    }
 
     .title;
 
@@ -34,12 +52,12 @@ atom-pane:not(.active) {
         padding-right: 10px;
         border-top: 1px solid transparent;
         margin-top: -1px;
-        max-width: 130px;
+        max-width: initial;
 
         text-transform: uppercase;
         font-size: 11px;
 
-        transition: all 150ms ease-out;
+        .transition-03;
 
         &:last-child {
           border-right: none;
