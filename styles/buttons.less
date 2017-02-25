@@ -50,21 +50,22 @@
 }
 
 .btn-color(@bg) {
+    .transition-03;
     color: @oc-white;
     background-color: @bg;
     &:focus,
     &:hover {
-        background-color: lighten(@bg, 50%) !important;
+        background-color: lighten(@bg, 25%) !important;
     }
     &:active {
-        background-color: darken(@bg, 25%) !important;
+        background-color: darken(@bg, 15%) !important;
     }
     &.selected {
-        background-color: lighten(@bg, 25%) !important;
+        background-color: darken(@bg, 10%) !important;
     }
     &.selected:focus,
     &.selected:hover {
-        background-color: lighten(@bg, 10%) !important;
+        background-color: darken(@bg, 5%) !important;
     }
 }
 // Button Group -----------------------
@@ -72,7 +73,7 @@
     .transition-03;
     border-color: transparent;
     &:hover {
-        background: @oc-gray-9;
         color: @oc-white;
+        background-color: @oc-gray-9;
     }
 }
