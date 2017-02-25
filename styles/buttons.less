@@ -4,28 +4,23 @@
 .btn {
     color: lighten(@text-color, 6%);
     background-color: @button-background-color;
-
     &:focus,
     &:hover {
         color: @text-color-highlight;
         background-color: @button-background-color-hover;
     }
-
     &:active {
         color: fade(@text-color-selected, 66%);
         background-color: darken(@button-background-color, 2%);
     }
-
     &.selected {
         color: @text-color-selected;
         background-color: @button-background-color-selected;
     }
-
     &:focus,
     &:focus:active {
         outline: none;
     }
-
     .icon {
         &::before {
             position: relative;
@@ -55,34 +50,29 @@
 }
 
 .btn-color(@bg) {
-    color: @text-color-selected;
+    color: @oc-white;
     background-color: @bg;
-
     &:focus,
     &:hover {
-        background-color: lighten(@bg, 4%);
+        background-color: lighten(@bg, 50%) !important;
     }
-
     &:active {
-        background-color: darken(@bg, 4%);
+        background-color: darken(@bg, 25%) !important;
     }
-
     &.selected {
-        background-color: lighten(@bg, 4%);
+        background-color: lighten(@bg, 25%) !important;
     }
-
     &.selected:focus,
     &.selected:hover {
-        background-color: lighten(@bg, 8%);
+        background-color: lighten(@bg, 10%) !important;
     }
 }
 // Button Group -----------------------
 .btn-group > .btn {
     .transition-03;
     border-color: transparent;
-
     &:hover {
         background: @oc-gray-9;
-        color: #FFF;
+        color: @oc-white;
     }
 }
