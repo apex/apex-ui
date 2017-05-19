@@ -1,7 +1,6 @@
 {
   "name": "apex-ui",
   "theme": "ui",
-  "main": "./lib/main",
   "version": "0.2.1",
   "description": "Apex monochrome theme UI inspired by iA Writer",
   "keywords": [
@@ -16,31 +15,5 @@
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
-  },
-  "configSchema": {
-    "tabWidth": {
-      "title": "Full Width",
-      "description": "Make The Tab Bar Full Width",
-      "type": "boolean",
-      "default": false
-    },
-    "grayFilter": {
-      "title": "Un-Focused Editor",
-      "description": "Dont Grayscale The Editor Window",
-      "type": "boolean",
-      "default": false
-    },
-    "showLogo": {
-      "title": "Show Logo",
-      "description": "Show Logo Instead Of BackGround Tips (reload window after applying)",
-      "type": "boolean",
-      "default": false
-    },
-    "bgImage": {
-      "title": "Background Image",
-      "description": "Replace BackGround Tips With An Image",
-      "type": "string",
-      "default": ""
-    }
   }
 }
