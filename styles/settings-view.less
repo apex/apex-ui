@@ -1,50 +1,49 @@
 .settings-view {
     .link {
         color: @primary-color;
-
         &:hover {
             color: @primary-color;
         }
     }
-
     .alert {
         border: none;
-
-        .alert-info {
-            
+        &.alert-info {
+            color: @oc-white;
+            background-color: @oc-gray-9;
         }
     }
-
     .config-menu {
         background: @base-background-color;
-
         .panels-menu {
             li {
-
                 a {
                     .transition-03;
                 }
-
                 &.active {
                     a {
                         background: @background-color-selected;
                     }
                 }
-
                 &:hover {
                     background: @background-color-highlight;
                 }
             }
         }
     }
-
     .package-card {
         .transition-03;
         background: @background-color-selected;
         border: none;
-
         &:hover {
             background: @background-color-highlight;
+        }
+    }
+    .section {
+        atom-text-editor[mini],
+        atom-text-editor[mini].is-focused {
+            .selection .region {
+                background-color: @oc-gray-1;
+            }
         }
     }
 }

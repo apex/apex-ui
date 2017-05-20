@@ -14,10 +14,9 @@
 .text-warning { color: @text-color-warning; }
 .text-error   { color: @text-color-error; }
 
-
 // Highlights ---------------
 
-.highlight         { .highlight-mixin(@background-color-highlight); }
+.highlight         { .plain-highlight-mixin(@background-color-highlight); }
 .highlight-info    { .highlight-mixin(@background-color-info); }
 .highlight-warning { .highlight-mixin(@background-color-warning); }
 .highlight-error   { .highlight-mixin(@background-color-error); }
@@ -27,9 +26,14 @@
   padding: 1px 4px;
   border-radius: @component-border-radius;
   background-color: @color;
+  color: @oc-white;
+}
+.plain-highlight-mixin(@color) {
+  padding: 1px 4px;
+  border-radius: @component-border-radius;
+  background-color: @color;
   color: @text-color-highlight;
 }
-
 
 // Background Message ---------------
 // Shown when no tabs are open.

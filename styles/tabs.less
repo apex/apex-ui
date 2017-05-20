@@ -3,15 +3,23 @@
 
 // Pane blur.
 atom-pane:not(.active) {
-  .tab-bar .tab.active {
-    border-top: 1px solid transparent;
-    color: @text-color-subtle;
-  }
+    .tab-bar .tab.active {
+        color: @text-color-subtle;
+        border-top: 1px solid transparent;
+    }
 }
 
 // Correct padding applied by no-title-bar
-.platform-darwin atom-workspace atom-panel-container.left:empty + atom-workspace-axis.vertical .tab-bar {
-  padding-left: 0 !important;
+.platform-darwin atom-workspace-axis.horizontal {
+    margin-left: -1px;
+    > .left {
+        &:empty + atom-workspace-axis.vertical .tab-bar {
+            padding-left: 0 !important;
+        }
+        &:not(:empty) {
+            margin-left: 6px;
+        }
+    }
 }
 
 // Tabs
@@ -20,82 +28,75 @@ atom-pane:not(.active) {
 // Overrides: atom/tabs
 
 .tab-bar {
-    background-color: @tab-bar-background-color;
-    border-top: 1px solid @base-border-color;
-    margin: 15px;
-
     .title;
-
+    margin: 9px 15px 15px;
+    z-index: 10;
+    background-color: @tab-bar-background-color;
+    border-top: 1px solid @base-border-color;;
+    * {
+        .transition-03;
+    }
+    &:empty {
+        background-color: white;
+        border-top: none;
+    }
     .tab {
-        color: @text-color-subtle;
+        .transition-03;
         height: @tab-height;
-        line-height: @tab-height;
-        font-size: @font-size;
         padding-right: 10px;
-        border-top: 1px solid transparent;
         margin-top: -1px;
-        max-width: 130px;
-
-        text-transform: uppercase;
+        font-size: @font-size;
         font-size: 11px;
-
-        transition: all 150ms ease-out;
-
+        line-height: @tab-height;
+        text-transform: uppercase;
+        color: @text-color-subtle;
+        border-top: 1px solid transparent;
         &:last-child {
-          border-right: none;
+            border-right: none;
         }
-
         .title {
             // text-align: center;
-
             .icon {
                 &::before {
                     font-size: 13px;
                 }
             }
         }
-
         &.active {
-            flex: 1;
+            font-weight: bold;
             color: @text-color-selected;
             border-top: 1px solid @tab-border-color-active;
-            font-weight: bold;
 
+            flex: 1;
             .title {
                 padding: 0;
             }
         }
         // Modified Icon (the blue circle) -------------------
-
         &.modified {
             .title {
                 color: @base-action-color;
             }
         }
-
         &.modified:not(:hover) .close-icon {
+            margin-top: -3px;
             top: 50%;
             right: @component-padding + 4px; // 4px -> half of icon size
-            margin-top: -3px;
             border-color: @text-color-info;
         }
-
         &.modified:hover .close-icon {
             color: currentColor;
         }
         // Close Icon (the X) -------------------
-
         .close-icon {
             opacity: 0;
             &::before {
                 text-align: center;
             }
-
             &:hover {
                 color: @text-color-selected;
             }
         }
-
         &.active .close-icon:hover {
             color: @text-color;
         }
@@ -103,14 +104,12 @@ atom-pane:not(.active) {
         // Styles get applied while dragging a tab
         &.is-dragging {
             background: darken(@tab-background-color, 10%);
-            border-color: transparent;
             opacity: 0.5;
-
+            border-color: transparent;
             & .close-icon {
                 visibility: hidden;
             }
         }
-
         &:hover {
             .close-icon {
                 opacity: 1;
