@@ -10,11 +10,11 @@ $ apm install apex-ui
 
 This variant:
 
-![](assets/normal.jpg)
+![](https://raw.githubusercontent.com/apex/apex-ui/master/assets/normal.jpg)
 
 Slim variant:
 
-![](assets/slim.jpg)
+![](https://raw.githubusercontent.com/apex/apex-ui/master/assets/slim.jpg)
 
 ## Links
 
