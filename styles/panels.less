@@ -33,6 +33,41 @@ atom-panel.modal {
   background: rgba(255, 255, 255, .95);
 }
 
+atom-panel.modal li {
+  margin: 5px 0;
+  background: #f8f9fa;
+  border-bottom: none;
+  border-radius: 3px;
+  border: 1px solid white;
+}
+
+atom-panel.modal .list-group .character-match {
+  border-bottom: none !important;
+  color: inherit;
+}
+
+atom-panel.modal li.selected {
+  background: white;
+  // border: 1px solid @oc-gray-6;
+  color: @oc-gray-9;
+}
+
+atom-panel.modal li:not(.list-nested-item) {
+  line-height: 1.5;
+}
+
+atom-panel.modal li.selected .secondary-line {
+  color: @oc-gray-5;
+}
+
+atom-panel.modal li .icon::before {
+  display: none;
+}
+
+atom-panel.modal li .no-icon {
+  padding-left: 0;
+}
+
 atom-panel.modal > .select-list {
   min-width: 500px;
 }
